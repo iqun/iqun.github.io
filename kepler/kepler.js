@@ -171,4 +171,7 @@ function mouseout(d) {
     svg.selectAll('circle').data(d.orbit.concat(d), function(o) {return o.color}).style('stroke', 'none');
 }
 
+if (window.location.hash.length > 1) {
+    level = parseInt(window.location.hash.substring(1));
+}
 generate();
